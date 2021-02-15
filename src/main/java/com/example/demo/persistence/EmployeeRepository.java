@@ -1,11 +1,15 @@
-package com.example.demo.persistence;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
- 
-@Repository
-public interface EmployeeRepository 
-        extends JpaRepository<EmployeeEntity, Long> {
- 
-}
+/*
+ * package com.example.demo.persistence;
+ * 
+ * import org.springframework.data.jpa.repository.JpaRepository; import
+ * org.springframework.stereotype.Repository; import
+ * org.springframework.transaction.annotation.Transactional;
+ * 
+ * 
+ * @Repository
+ * 
+ * @Transactional public interface EmployeeRepository extends
+ * JpaRepository<EmployeeEntity, Long> {
+ * 
+ * }
+ */
