@@ -67,7 +67,6 @@ public class QuestionsControllerTest{
 		System.out.println(result.getResponse().getContentAsString());
 		String expected = "[{\"id\":1,\"author\":\"Mohil\",\"message\":\"Question with ID1\",\"replies\":1}]";
 
-		// {"id":"Course1","name":"Spring","description":"10 Steps, 25 Examples and 10K Students","steps":["Learn Maven","Import Project","First Example","Second Example"]}
 
 		JSONAssert.assertEquals(expected, result.getResponse()
 				.getContentAsString(), false);
@@ -120,11 +119,9 @@ public class QuestionsControllerTest{
 		question.setAuthor("Mohil");
 		question.setMessage("Question with ID1");
 		question.setReplies(1);
-		// studentService.addCourse to respond back with mockCourse
 		Mockito.when(
 				studentService.addQuestion(Mockito.any(QuestionRequestBean.class))).thenReturn(question);
 
-		// Send course as body to /students/Student1/courses
 		RequestBuilder requestBuilder = MockMvcRequestBuilders
 				.post("/questions")
 				.accept(MediaType.APPLICATION_JSON).content(exampleQuestionJson)
@@ -146,11 +143,9 @@ public class QuestionsControllerTest{
 		question.setId(1L);
 		question.setAuthor("Mohil");
 		question.setMessage("Question with ID1");
-		// studentService.addCourse to respond back with mockCourse
 		Mockito.when(
 				studentService.addQuestionDetail(Mockito.any(QuestionRequestBean.class), Mockito.anyObject())).thenReturn(question);
 
-		// Send course as body to /students/Student1/courses
 		RequestBuilder requestBuilder = MockMvcRequestBuilders
 				.post("/questions/1/reply")
 				.accept(MediaType.APPLICATION_JSON).content(exampleQuestionJson)
