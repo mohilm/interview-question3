@@ -93,3 +93,10 @@ The response should look like:
 * Send us a link to a repository fulfilling the requirements.
 * Your code will be tested using different tests.
 * Successful implementation will move to interview.
+
+## Note by Mohil 
+* H2 console url : http://localhost:5000/h2-console
+* jdbc url : jdbc:h2:mem:testdb
+* username : sa
+* password : password
+
